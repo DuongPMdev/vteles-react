@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+.main-content {
+  display: flex;
+  flex: 1; /* Takes remaining height */
+}
+
+.sidebar {
+  width: 400px; /* Sidebar width */
+  background-color: #333; /* Sidebar color */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  margin-bottom: 20px; /* Space below buttons */
+}
+
+button {
+  margin: 5px 0; /* Space between buttons */
+  padding: 10px;
+  background-color: #4a90e2; /* Default button color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #357ab8; /* Darker shade on hover */
+}
+
+.logout-button {
+  background-color: red; /* Red logout button */
+}
+
+.logout-button:hover {
+  background-color: darkred; /* Darker shade on hover */
+}
+
+.section-button {
+  font-size: large;
+  text-align: left;
+  background-color: transparent; /* Red logout button */
+}
+
+.section-button:hover {
+  background-color: #357ab8; /* Darker shade on hover */
+}
+
+.section-button.active {
+  font-weight: bold;
+  background-color: blue; /* Color for active section */
+  color: white; /* Text color for active section */
+}
+
+.logo {
+  width: 100%; /* Adjust logo size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space below the logo */
+}
+
+.content {
+  flex: 1; /* Takes remaining width */
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin: 20px; /* Space around the title */
+  font-size: 28px;
+}
+
+.sections {
+  display: flex;
+  flex: 1; /* Fill remaining space */
+  justify-content: space-between; /* Space out sections */
+}
+
+.section {
+  flex: 1; /* Equally spaced sections */
+  margin: 10px; /* Space between sections */
+  padding: 20px;
+  background-color: #f0f0f0; /* Section background color */
+  text-align: center;
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column; /* Stack sidebar and content */
+  }
+  
+  .sidebar {
+    width: 100%; /* Full width on smaller screens */
+  }
+  
+  .sections {
+    flex-direction: row; /* Stack sections vertically */
+  }
+
+  .section {
+    margin: 10px 0; /* Margin for vertical sections */
+    height: 100%; /* Ensure sections fill height */
+  }
+}
